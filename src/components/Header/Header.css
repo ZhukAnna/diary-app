@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 20px 30px;
+}
+.header__title {
+  font-size: 24px;
+  line-height: 40px;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+
+.user-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #ffc50a;
+  color: white;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+}

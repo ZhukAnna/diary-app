@@ -1,0 +1,69 @@
+.habits {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.input {
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  color: #e6e6e6;
+  font-weight: inherit;
+}
+
+.input_type_checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.input_type_checkbox svg polyline {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 14px;
+  stroke-dashoffset: 14px;
+  transition: all 0.3s ease;
+}
+input[type="checkbox"]:focus-visible + .input_type_checkbox {
+  border-color: #25bf00;
+}
+input[type="checkbox"]:checked + .input_type_checkbox {
+  border-color: #25bf00;
+  background-color: #25bf00;
+}
+input[type="checkbox"]:checked + .input_type_checkbox svg polyline {
+  stroke-dashoffset: 0;
+}
+.input__label {
+  font-size: 16px;
+}
+.input__label_text {
+  padding-left: 8px;
+}
+.input__label_cbx {
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.input__label_cbx span {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  opacity: 0;
+}
+.form__checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

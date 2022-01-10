@@ -1,0 +1,17 @@
+.main-wrapper {
+  display: flex;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #f4fff2;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 22px 20px;
+  padding: 20px 30px 30px;
+}

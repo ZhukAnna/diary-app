@@ -1,0 +1,24 @@
+.current {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.current__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.current__date,
+.current__month {
+  font-weight: bold;
+  font-size: 72px;
+  text-transform: uppercase;
+  color: #a0ff8c;
+}
+.current__day,
+.current__time {
+  font-weight: normal;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #21bf00;
+}
