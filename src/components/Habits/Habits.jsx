@@ -1,76 +1,37 @@
-import React, {Component} from 'react';
+import React  from 'react';
+import { useForm } from 'react-hook-form';
 import './Habits.css';
 
 
-export default class Habits extends Component {
-    render() {
-        return (
-            <div className="habits">
+const Habits = () => {
 
-                <label class="input__label input__label_cbx form__checkbox-wrapper" for="input-checkbox">
-                    <input type="checkbox" class="visually-hidden" id="input-checkbox" />
-                    <div class="input input_type_checkbox">
-                        <svg width="16" height="16" viewBox="0 0 20 20">
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+      } = useForm({
+        mode: "onChange"
+      });
+    const onSubmit = data => console.log(data);
+    if (errors.length) console.log(errors);
+
+    const habitsList = ['Sleep 8 hours','No coffee','Vitamins','Blog post','Exercise','10000 steps','Reading 20 mins'];
+
+    return (
+        <form className="habits" onSubmit={handleSubmit(onSubmit)}>
+            {habitsList.map((value) => (
+                <label className="input__label input__label_cbx form__checkbox-wrapper" htmlFor={value} key={value}>
+                <input type="checkbox"  className="visually-hidden"  placeholder={value} id={value} {...register(value, {})} />
+                <div className="input input_type_checkbox">
+                        <svg width="18" height="18" viewBox="0 0 20 20">
                             <polyline points="3.4,7.8 6.6,11.0 12.7,5.2"></polyline>
                         </svg>
                     </div>
-                    <span>Sleep 8 hours</span>
+                <span>{value}</span>
                 </label>
-                <label class="input__label input__label_cbx form__checkbox-wrapper" for="input-checkbox">
-                    <input type="checkbox" class="visually-hidden" id="input-checkbox" checked/>
-                    <div class="input input_type_checkbox">
-                        <svg width="16" height="16" viewBox="0 0 20 20">
-                            <polyline points="3.4,7.8 6.6,11.0 12.7,5.2"></polyline>
-                        </svg>
-                    </div>
-                    <span>No coffee</span>
-                </label>
-                <label class="input__label input__label_cbx form__checkbox-wrapper" for="input-checkbox">
-                    <input type="checkbox" class="visually-hidden" id="input-checkbox"  checked/>
-                    <div class="input input_type_checkbox">
-                        <svg width="16" height="16" viewBox="0 0 20 20">
-                            <polyline points="3.4,7.8 6.6,11.0 12.7,5.2"></polyline>
-                        </svg>
-                    </div>
-                    <span>Vitamins</span>
-                </label>
-                <label class="input__label input__label_cbx form__checkbox-wrapper" for="input-checkbox">
-                    <input type="checkbox" class="visually-hidden" id="input-checkbox" />
-                    <div class="input input_type_checkbox">
-                        <svg width="16" height="16" viewBox="0 0 20 20">
-                            <polyline points="3.4,7.8 6.6,11.0 12.7,5.2"></polyline>
-                        </svg>
-                    </div>
-                    <span>Blog post</span>
-                </label>
-                <label class="input__label input__label_cbx form__checkbox-wrapper" for="input-checkbox">
-                    <input type="checkbox" class="visually-hidden" id="input-checkbox"  checked/>
-                    <div class="input input_type_checkbox">
-                        <svg width="16" height="16" viewBox="0 0 20 20">
-                            <polyline points="3.4,7.8 6.6,11.0 12.7,5.2"></polyline>
-                        </svg>
-                    </div>
-                    <span>Exercise</span>
-                </label>
-                <label class="input__label input__label_cbx form__checkbox-wrapper" for="input-checkbox">
-                    <input type="checkbox" class="visually-hidden" id="input-checkbox" />
-                    <div class="input input_type_checkbox">
-                        <svg width="16" height="16" viewBox="0 0 20 20">
-                            <polyline points="3.4,7.8 6.6,11.0 12.7,5.2"></polyline>
-                        </svg>
-                    </div>
-                    <span>10000 steps</span>
-                </label>
-                <label class="input__label input__label_cbx form__checkbox-wrapper" for="input-checkbox">
-                    <input type="checkbox" class="visually-hidden" id="input-checkbox" />
-                    <div class="input input_type_checkbox">
-                        <svg width="16" height="16" viewBox="0 0 20 20">
-                            <polyline points="3.4,7.8 6.6,11.0 12.7,5.2"></polyline>
-                        </svg>
-                    </div>
-                    <span>Reading 20 mins</span>
-                </label>
-            </div> 
-        )
-    }
+            ))}
+        </form> 
+    );
 }
+
+export default Habits;
