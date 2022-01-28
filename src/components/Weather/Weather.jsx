@@ -26,7 +26,6 @@ export default class Weather extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            location: 'Moscow',
             city: undefined,
             country: undefined,
             temp: 0,
@@ -36,24 +35,12 @@ export default class Weather extends Component {
         };
     }
 
-    componentDidMount() {
-        this.getLocation();
+    componentDidMount() {  
         this.weatherData();
     }
 
-    getLocation = () => {
-        fetch(`https://geolocation-db.com/json/`)
-        .then(response => response.json())
-        .then(data => {
-                this.setState({location: data.city});
-            })
-        .catch(error => {
-            console.log('Error fetching and parsing data', error);
-        });
-    }
-
-    weatherData = async () => {
-        fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${this.state.location}&aqi=no`)
+    weatherData = () => {
+        fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=auto:ip&aqi=no`)
         .then(response => response.json())
         .then(data => {
                 this.setState({
