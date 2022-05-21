@@ -4,7 +4,7 @@
   gap: 6px 10%;
   margin: auto 0;
 }
-.exchange_item {
+.exchange__item {
   display: flex;
   justify-content: space-between;
   width: 45%;
