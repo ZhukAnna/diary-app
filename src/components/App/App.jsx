@@ -11,12 +11,12 @@ import SignUp from '../../pages/signup/signup.js';
 function App() {
   return (
     <Routes>
-      <Route path={'/'} element={<Layout/>}>
-        <Route index element={<Dashboard/>}/>
-        <Route path={'dashboard'} element={<Dashboard/>}/>
-        <Route path={'diary'} element={<Diary/>}/>
-        <Route path={'signin'} element={<SignIn/>}/>
-        <Route path={'signup'} element={<SignUp/>}/>
+      <Route path={'/'} element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path={'dashboard'} element={<Dashboard />} />
+        <Route path={'diary'} element={<Diary />} />
+        <Route path={'signin'} element={<SignIn />} />
+        <Route path={'signup'} element={<SignUp />} />
       </Route>
     </Routes>
   );
@@ -24,17 +24,16 @@ function App() {
 
 function Layout() {
   return (
-    <div className='main-wrapper'> 
+    <div className="main-wrapper">
       <Sidebar />
-      <div className='container'>
+      <div className="container">
         <Header />
-        <div className='main'>
-          <Outlet/>
+        <div className="main">
+          <Outlet />
         </div>
       </div>
-  </div>
-  )
+    </div>
+  );
 }
-
 
 export default App;

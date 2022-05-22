@@ -37,7 +37,7 @@
   fill: #21bf00;
 }
 .sidebar__item_active::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   width: 4px;

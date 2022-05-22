@@ -27,14 +27,14 @@
   stroke-dashoffset: 14px;
   transition: all 0.3s ease;
 }
-input[type="checkbox"]:focus-visible + .input_type_checkbox {
+input[type='checkbox']:focus-visible + .input_type_checkbox {
   border-color: #25bf00;
 }
-input[type="checkbox"]:checked + .input_type_checkbox {
+input[type='checkbox']:checked + .input_type_checkbox {
   border-color: #25bf00;
   background-color: #25bf00;
 }
-input[type="checkbox"]:checked + .input_type_checkbox svg polyline {
+input[type='checkbox']:checked + .input_type_checkbox svg polyline {
   stroke-dashoffset: 0;
 }
 .input__label {

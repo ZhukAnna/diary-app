@@ -3,9 +3,11 @@ import Card from '../../components/Card/Card.jsx';
 import './Diary.css';
 
 function Diary() {
-  return <>
-            <Card />
-        </>
+  return (
+    <>
+      <Card />
+    </>
+  );
 }
 
 export default Diary;
