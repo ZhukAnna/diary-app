@@ -13,7 +13,6 @@ export default function Exchange() {
       )
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           setCurrency(data.rates);
         })
         .catch((error) => {
