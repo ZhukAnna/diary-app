@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from '../../components/Card/Card.jsx';
+import Card from '../../components/ui/Card/Card.jsx';
 import Today from '../../components/Today/Today.jsx';
 import Exchange from '../../components/Exchange/Exchange.jsx';
 import Weather from '../../components/Weather/Weather.jsx';
