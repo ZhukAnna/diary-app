@@ -4,7 +4,7 @@ import Today from '../../components/Today/Today.jsx';
 import Exchange from '../../components/Exchange/Exchange.jsx';
 import Weather from '../../components/Weather/Weather.jsx';
 import Quote from '../../components/Quote/Quote.jsx';
-import Tasks from '../../components/Tasks/Tasks.jsx';
+import TasksWidget from '../../components/Tasks/Tasks.jsx';
 import Habits from '../../components/Habits/Habits.jsx';
 import './Dashboard.css';
 
@@ -22,7 +22,7 @@ export default class Dashboard extends Component {
           <Weather />
         </Card>
         <Card title="Tasks">
-          <Tasks />
+          <TasksWidget />
         </Card>
         <Card title="Daily motivation">
           <Quote />
